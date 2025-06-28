@@ -74,7 +74,7 @@ function! s:Hier(clearonly)
 				endif
 
 				if i.lnum > 0
-					call matchadd(hi_group, '\%'.i.lnum.'l')
+					call matchaddpos(hi_group, [[i.lnum]])
 				elseif i.pattern != ''
 					call matchadd(hi_group, i.pattern)
 				endif
